@@ -22,6 +22,7 @@ Route::get('/', function () {
 Route::get('/user', [UserController::Class, 'index'])->middleware('auth')->name('user');
 Route::get('/user/tambah', [UserController::Class, 'tambah'])->middleware('auth')->name('user.tambah');
 Route::get('/user/lihat', [UserController::Class, 'lihat'])->middleware('auth')->name('user.lihat');
+Route::get('/user/hapus', [UserController::Class, 'hapus'])->middleware('auth')->name('user.hapus');
 
 Route::get('/coba', function () {
     return 'Coba coba';
